@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Permintaan - SIDORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css">
+    <style>
+        .filter-section {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .filter-group label {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-Ditinjau { background-color: #fef3c7; color: #92400e; }
+        .badge-disetujui { background-color: #cffafe; color: #164e63; }
+        .badge-ditolak { background-color: #fee2e2; color: #991b1b; }
+        .badge-dikirim { background-color: #dcfce7; color: #166534; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <button class="navbar-toggle" id="sidebarToggle"><svg width="22" height="22" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+                <span class="navbar-brand">SIDORA Rumah Sakit</span>
+            </div>
+            <div class="navbar-right">
+                <div class="navbar-search">
+                    <span><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+                    <input type="text" placeholder="Cari...">
+                </div>
+                <div class="navbar-user">
+                    <div class="user-avatar">RS</div>
+                    <span>Rumah Sakit</span>
+                    <span><svg width="16" height="16" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+            </div>
+        </nav>
+
+        <aside class="sidebar" id="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="dashboard.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="4" height="12"/><rect x="10" y="5" width="4" height="16"/><rect x="17" y="1" width="4" height="20"/></svg></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title">PERMINTAAN DARAH</li>
+                
+                <li class="sidebar-menu-item">
+                    <a href="permintaan-darah.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/><polyline points="9 8 10 9 12 7"/></svg></span>
+                        <span>Ajukan Permintaan</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item">
+                    <a href="history-permintaan.html" class="sidebar-menu-link active">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+                        <span>Riwayat Permintaan</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title">INFORMASI</li>
+                
+                <li class="sidebar-menu-item">
+                    <a href="stok-darah.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+                        <span>Lihat Stok Darah</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title" id="pengaturanTitle">PENGATURAN</li>
+                
+                <li class="sidebar-menu-item" id="profilMenuItem">
+                    <a href="profil.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                        <span>Profil</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item">
+                    <a href="../../pages/auth/login.html" class="sidebar-menu-link" style="color: var(--danger-color);">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <a href="dashboard.html">Dashboard</a>
+                    <span>/</span>
+                    <span>Riwayat Permintaan</span>
+                </div>
+                <div class="page-title">
+                    <h1>Riwayat Permintaan Darah</h1>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-group" style="flex: 2; min-width: 200px;">
+                    <label for="searchHistory">Cari Permintaan</label>
+                    <input type="text" id="searchHistory" placeholder="No. Pasien, Golongan Darah...">
+                </div>
+                <div class="filter-group">
+                    <label for="filterStatus">Status</label>
+                    <select id="filterStatus">
+                        <option value="">Semua Status</option>
+                        <option value="Ditinjau">Ditinjau</option>
+                        <option value="disetujui">Disetujui</option>
+                        <option value="ditolak">Ditolak</option>
+                        <option value="dikirim">Dikirim</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterTanggal">Periode</label>
+                    <input type="date" id="filterTanggal">
+                </div>
+                <button class="btn btn-outline"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg> Reset</button>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Riwayat Permintaan Lengkap</h3>
+                    <button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="3" y="9" width="4" height="12"/><rect x="10" y="5" width="4" height="16"/><rect x="17" y="1" width="4" height="20"/></svg> Export</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Pasien</th>
+                                <th>Ruangan</th>
+                                <th>Darah</th>
+                                <th>Jumlah</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2024-04-24</td>
+                                <td>Ari Pratama</td>
+                                <td>ICU</td>
+                                <td>O+</td>
+                                <td>5 kantong</td>
+                                <td><span class="status-badge badge-Ditinjau"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Ditinjau</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2024-04-23</td>
+                                <td>Dewi Lestari</td>
+                                <td>Kamar 302</td>
+                                <td>A-</td>
+                                <td>3 kantong</td>
+                                <td><span class="status-badge badge-disetujui"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Disetujui</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2024-04-20</td>
+                                <td>Hendra Gunawan</td>
+                                <td>Bedah</td>
+                                <td>B+</td>
+                                <td>10 kantong</td>
+                                <td><span class="status-badge badge-dikirim"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Dikirim</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2024-04-18</td>
+                                <td>Mia Farida</td>
+                                <td>Poli Dalam</td>
+                                <td>AB-</td>
+                                <td>2 kantong</td>
+                                <td><span class="status-badge badge-ditolak"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Ditolak</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2024-04-15</td>
+                                <td>Budi Santoso</td>
+                                <td>Jantung</td>
+                                <td>O+</td>
+                                <td>6 kantong</td>
+                                <td><span class="status-badge badge-dikirim"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Dikirim</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Detail</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../controllers/sidebar.js"></script>
+</body>
+</html>
