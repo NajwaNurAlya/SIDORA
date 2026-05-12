@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDORA - Sistem Informasi Donor Darah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <style>
+        .navbar-public {
+            background: #1D1616;
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .navbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .navbar-actions { display: flex; gap: 12px; }
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .btn-outline-white:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+            text-decoration: none;
+            color: white;
+        }
+
+        .hero {
+            background: #8E1616;
+            color: white;
+            padding: 100px var(--spacing-lg);
+            text-align: center;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: var(--spacing-base);
+            font-weight: 700;
+        }
+        .hero p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+            max-width: 540px;
+            margin: 0 auto var(--spacing-lg);
+            line-height: 1.75;
+        }
+        .hero-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .btn-light-hero {
+            background: white;
+            color: #8E1616;
+            font-weight: 600;
+            padding: 10px 28px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            border: 2px solid white;
+        }
+        .btn-light-hero:hover {
+            background: transparent;
+            color: white;
+            text-decoration: none;
+        }
+
+        .features-section {
+            padding: 70px var(--spacing-lg);
+            background: var(--light);
+        }
+        .section-title { text-align: center; margin-bottom: var(--spacing-2xl); }
+        .section-title h2 { color: var(--dark); }
+        .section-title p  { color: var(--text-muted); margin: 0; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg) var(--spacing-md);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .feature-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+        .feature-card .icon { font-size: 2.4rem; color: #8E1616; margin-bottom: var(--spacing-md); }
+        .feature-card h3 { font-size: 18px; color: var(--dark); margin-bottom: var(--spacing-sm); }
+        .feature-card p  { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0; }
+
+        .footer-pub {
+            background: #1D1616;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: var(--spacing-lg);
+            font-size: 14px;
+        }
+        .footer-pub p { margin: 0; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar-public">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="64" height="64" rx="14" fill="#D84040"/>
+                    <text x="32" y="44" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="700" fill="white" text-anchor="middle">S</text>
+                </svg>
+                SIDORA
+            </a>
+            <div class="navbar-actions">
+                <a href="login.html" class="btn-outline-white">Masuk</a>
+                <a href="register-rs.html" class="btn btn-primary" style="padding: 8px 20px;">Daftar Rumah Sakit</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Selamat Datang di SIDORA</h1>
+        <p>Sistem Informasi Donor Darah berbasis web untuk pengelolaan data pendonor, stok darah, dan permintaan secara terintegrasi.</p>
+        <div class="hero-btns">
+            <a href="login.html" class="btn-light-hero">Login Sistem</a>
+            <a href="#features" class="btn-outline-white">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="section-title">
+            <h2>Fitur Utama</h2>
+            <p>Kemudahan dalam pengelolaan donor darah</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Manajemen Pendonor</h3>
+                <p>Kelola data pendonor dan riwayat donasi dengan mudah dan terstruktur.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fa-solid fa-vial"></i></div>
+                <h3>Monitoring Stok Darah</h3>
+                <p>Pantau ketersediaan stok darah berbagai golongan secara real-time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fa-solid fa-truck-medical"></i></div>
+                <h3>Permintaan Darah</h3>
+                <p>Fasilitas bagi Rumah Sakit untuk mengajukan permintaan darah dengan cepat.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-pub">
+        <p>&copy; 2026 SIDORA - Sistem Informasi Donor Darah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
