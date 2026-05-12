@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Petugas - SIDORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <nav class="navbar">
+            <div class="navbar-left">
+                <button class="navbar-toggle" id="sidebarToggle"><svg width="22" height="22" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+                <span class="navbar-brand">SIDORA Petugas</span>
+            </div>
+
+            <div class="navbar-right">
+                <div class="navbar-search">
+                    <span><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+                    <input type="text" placeholder="Cari pendonor...">
+                </div>
+
+                <div class="navbar-user">
+                    <div class="user-avatar">PT</div>
+                    <span>Budi Santoso</span>
+                    <span><svg width="16" height="16" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+            </div>
+        </nav>
+
+        <aside class="sidebar" id="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#dashboard" class="sidebar-menu-link active">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="4" height="12"/><rect x="10" y="5" width="4" height="16"/><rect x="17" y="1" width="4" height="20"/></svg></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title">MANAJEMEN DATA</li>
+                
+                <li class="sidebar-menu-item">
+                    <a href="daftar-pendonor.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></span>
+                        <span>Daftar Pendonor</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item">
+                    <a href="riwayat-donasi.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/><polyline points="9 8 10 9 12 7"/></svg></span>
+                        <span>Riwayat Donasi</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-title">INFORMASI</li>
+                
+                <li class="sidebar-menu-item">
+                    <a href="jadwal-donor.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+                        <span>Jadwal Donor</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item">
+                    <a href="stok-darah.html" class="sidebar-menu-link">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+                        <span>Stok Darah</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-divider"></li>
+
+                <li class="sidebar-menu-item">
+                    <a href="../../pages/auth/login.html" class="sidebar-menu-link" style="color: var(--danger-color);">
+                        <span class="sidebar-menu-icon"><svg width="18" height="18" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <a href="#dashboard">Dashboard</a>
+                    <span>/</span>
+                    <span>Beranda</span>
+                </div>
+
+                <div class="page-title">
+                    <h1>Selamat Datang, Petugas! <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></h1>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Total Pendonor -->
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Total Pendonor</h3>
+                        <p class="stat-value">238</p>
+                        <div class="stat-change positive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg> Bulan ini: +12
+                        </div>
+                    </div>
+                    <div class="stat-icon primary"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Donasi Hari Ini</h3>
+                        <p class="stat-value">8</p>
+                        <div class="stat-change positive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Terdaftar
+                        </div>
+                    </div>
+                    <div class="stat-icon success"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Total Stok Darah</h3>
+                        <p class="stat-value">856</p>
+                        <div class="stat-change positive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Terpenuhi
+                        </div>
+                    </div>
+                    <div class="stat-icon primary"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Jadwal Donor Aktif</h3>
+                        <p class="stat-value">5</p>
+                        <div class="stat-change positive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Bulan Ini
+                        </div>
+                    </div>
+                    <div class="stat-icon warning"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-2xl);">
+                <div class="card" style="text-align: center; cursor: pointer; transition: var(--transition);" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow)'" onclick="window.location.href='daftar-pendonor.html'">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">Daftar Pendonor</h3>
+                    <p style="color: var(--gray); margin: var(--spacing-sm) 0 0 0;">Kelola data pendonor</p>
+                </div>
+
+                <div class="card" style="text-align: center; cursor: pointer; transition: var(--transition);" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow)'" onclick="window.location.href='riwayat-donasi.html'">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">Riwayat Donasi</h3>
+                    <p style="color: var(--gray); margin: var(--spacing-sm) 0 0 0;">Catat riwayat donasi</p>
+                </div>
+
+                <div class="card" style="text-align: center; cursor: pointer; transition: var(--transition);" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow)'" onclick="window.location.href='jadwal-donor.html'">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">Jadwal Donor</h3>
+                    <p style="color: var(--gray); margin: var(--spacing-sm) 0 0 0;">Lihat jadwal donor</p>
+                </div>
+
+                <div class="card" style="text-align: center; cursor: pointer; transition: var(--transition);" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow)'" onclick="window.location.href='stok-darah.html'">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">Stok Darah</h3>
+                    <p style="color: var(--gray); margin: var(--spacing-sm) 0 0 0;">Monitor ketersediaan</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Riwayat Donasi Terbaru</h3>
+                    <button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="3" y="9" width="4" height="12"/><rect x="10" y="5" width="4" height="16"/><rect x="17" y="1" width="4" height="20"/></svg> Export</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Pendonor</th>
+                                <th>Golongan Darah</th>
+                                <th>Jumlah</th>
+                                <th>Tanggal Donasi</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ari Pratama</td>
+                                <td><span style="background: #dcfce7; padding: 0.25rem 0.5rem; border-radius: 4px; color: #166534; font-weight: 600;">O+</span></td>
+                                <td>450 ml</td>
+                                <td>2024-04-24</td>
+                                <td><span class="badge badge-success"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Selesai</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Dewi Lestari</td>
+                                <td><span style="background: #fee2e2; padding: 0.25rem 0.5rem; border-radius: 4px; color: #991b1b; font-weight: 600;">A-</span></td>
+                                <td>450 ml</td>
+                                <td>2024-04-23</td>
+                                <td><span class="badge badge-success"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Selesai</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Hendra Gunawan</td>
+                                <td><span style="background: #cffafe; padding: 0.25rem 0.5rem; border-radius: 4px; color: #164e63; font-weight: 600;">B+</span></td>
+                                <td>450 ml</td>
+                                <td>2024-04-22</td>
+                                <td><span class="badge badge-success"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Selesai</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mia Farida</td>
+                                <td><span style="background: #e0e7ff; padding: 0.25rem 0.5rem; border-radius: 4px; color: #3730a3; font-weight: 600;">AB+</span></td>
+                                <td>450 ml</td>
+                                <td>2024-04-20</td>
+                                <td><span class="badge badge-success"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Selesai</span></td>
+                                <td><button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Lihat</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Jadwal Donor Mendatang</h3>
+                    <button class="btn btn-outline btn-small"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Lihat Semua</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Waktu</th>
+                                <th>Lokasi</th>
+                                <th>Peserta Terdaftar</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-04-27</td>
+                                <td>08:00 - 14:00</td>
+                                <td>Gedung Olahraga</td>
+                                <td>35 orang</td>
+                                <td><span class="badge badge-warning"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Akan Datang</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-05-04</td>
+                                <td>09:00 - 15:00</td>
+                                <td>Terminal Trans Metro</td>
+                                <td>42 orang</td>
+                                <td><span class="badge badge-warning"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Akan Datang</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-05-11</td>
+                                <td>08:00 - 14:00</td>
+                                <td>Gedung Olahraga</td>
+                                <td>28 orang</td>
+                                <td><span class="badge badge-warning"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Akan Datang</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .badge-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+    </style>
+    <script src="../../controllers/sidebar.js"></script>
+</body>
+</html>
