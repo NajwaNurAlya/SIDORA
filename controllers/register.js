@@ -1,7 +1,3 @@
-// Controller: Register
-// Dipakai di register-rs.html
-
-// Toggle password visibility - password utama
 document.getElementById('togglePassword').addEventListener('click', function () {
     const input = document.getElementById('password');
     const isHidden = input.type === 'password';
@@ -10,7 +6,6 @@ document.getElementById('togglePassword').addEventListener('click', function () 
     document.getElementById('iconEyeOff').style.display = isHidden ? ''     : 'none';
 });
 
-// Toggle password visibility - konfirmasi password
 document.getElementById('togglePassword2').addEventListener('click', function () {
     const input = document.getElementById('confirm_password');
     const isHidden = input.type === 'password';

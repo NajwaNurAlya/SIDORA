@@ -1,7 +1,3 @@
-/* ============================================
-   AUTH PAGES STYLES - SIDORA
-   ============================================ */
-
 .auth-page {
   background: linear-gradient(135deg, #8E1616 0%, #D84040 100%);
   min-height: 100vh;
@@ -55,7 +51,6 @@
   }
 }
 
-/* Header */
 .auth-header {
   text-align: center;
   margin-bottom: var(--spacing-2xl);
@@ -94,7 +89,6 @@
   margin: 0;
 }
 
-/* Form */
 .login-form {
   margin-bottom: var(--spacing-lg);
 }
@@ -138,7 +132,6 @@
   box-shadow: 0 6px 16px rgba(30, 58, 138, 0.4);
 }
 
-/* Footer */
 .auth-footer {
   text-align: center;
   padding-top: var(--spacing-lg);
@@ -159,7 +152,6 @@
   color: var(--secondary-color);
 }
 
-/* Role Info */
 .role-info {
   background-color: var(--light-gray);
   border-radius: var(--border-radius);
@@ -182,7 +174,6 @@
   color: var(--gray);
 }
 
-/* Side Content */
 .side-content {
   padding: var(--spacing-lg);
 }
@@ -225,7 +216,6 @@
   font-weight: bold;
 }
 
-/* Register Page */
 .register-form {
   margin-bottom: var(--spacing-lg);
 }

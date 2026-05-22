@@ -12,7 +12,6 @@
 </head>
 <body>
     <div class="dashboard-layout">
-        <!-- Navbar -->
         <nav class="navbar">
             <div class="navbar-left">
                 <button class="navbar-toggle" id="sidebarToggle"><svg width="22" height="22" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
@@ -33,7 +32,6 @@
             </div>
         </nav>
 
-        <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <ul class="sidebar-menu">
                 <li class="sidebar-menu-item">
@@ -86,9 +84,7 @@
             </ul>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
-            <!-- Page Header -->
             <div class="page-header">
                 <div class="breadcrumb">
                     <a href="#dashboard">Dashboard</a>
@@ -101,9 +97,7 @@
                 </div>
             </div>
 
-            <!-- Quick Stats -->
             <div class="dashboard-grid">
-                <!-- Total Pendonor -->
                 <div class="stat-card">
                     <div class="stat-content">
                         <h3>Total Pendonor</h3>
@@ -115,7 +109,6 @@
                     <div class="stat-icon primary"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
                 </div>
 
-                <!-- Donasi Hari Ini -->
                 <div class="stat-card">
                     <div class="stat-content">
                         <h3>Donasi Hari Ini</h3>
@@ -127,7 +120,6 @@
                     <div class="stat-icon success"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
                 </div>
 
-                <!-- Stok Darah -->
                 <div class="stat-card">
                     <div class="stat-content">
                         <h3>Total Stok Darah</h3>
@@ -139,7 +131,6 @@
                     <div class="stat-icon primary"><svg width="24" height="24" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
                 </div>
 
-                <!-- Jadwal Aktif -->
                 <div class="stat-card">
                     <div class="stat-content">
                         <h3>Jadwal Donor Aktif</h3>
@@ -152,7 +143,6 @@
                 </div>
             </div>
 
-            <!-- Quick Actions -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-2xl);">
                 <div class="card" style="text-align: center; cursor: pointer; transition: var(--transition);" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow)'" onclick="window.location.href='daftar-pendonor.html'">
                     <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
@@ -179,7 +169,6 @@
                 </div>
             </div>
 
-            <!-- Recent Activity -->
             <div class="table-container">
                 <div class="table-header">
                     <h3>Riwayat Donasi Terbaru</h3>
@@ -241,7 +230,6 @@
                 </div>
             </div>
 
-            <!-- Jadwal Mendatang -->
             <div class="table-container">
                 <div class="table-header">
                     <h3>Jadwal Donor Mendatang</h3>

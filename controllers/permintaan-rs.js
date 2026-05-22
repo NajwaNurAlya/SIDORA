@@ -1,6 +1,3 @@
-// Controller: Permintaan Darah (Rumah Sakit)
-// Dipakai di rumahsakit/permintaan-darah.html
-
 function handleFileChange(input) {
     const fileName = document.getElementById('fileName');
     const uploadBox = document.getElementById('uploadBox');
@@ -19,17 +16,14 @@ function handleFileChange(input) {
 let selectedBloodType = null;
 
 function selectBloodType(btn, type) {
-    // Remove previous selection
     document.querySelectorAll('.blood-type-btn').forEach(b => {
         b.classList.remove('selected');
     });
     
-    // Add selection to clicked button
     btn.classList.add('selected');
     selectedBloodType = type;
     document.getElementById('selectedBloodType').value = type;
     
-    // Update summary
     document.getElementById('summaryBlood').textContent = type;
     updateSummary();
 }
@@ -58,10 +52,8 @@ function updateSummary() {
     document.getElementById('summaryTotal').textContent = `${blood} x ${qty} kantong`;
 }
 
-// Update summary when priority changes
 document.getElementById('prioritas').addEventListener('change', updateSummary);
 
-// Form submission
 document.getElementById('permintaanForm').addEventListener('submit', (e) => {
     e.preventDefault();
     
@@ -71,11 +63,8 @@ document.getElementById('permintaanForm').addEventListener('submit', (e) => {
     }
 
     alert('Permintaan darah berhasil diajukan! Anda akan menerima notifikasi persetujuan dalam waktu maksimal 24 jam.');
-    // TODO: Send to backend API
-    // window.location.href = 'history-permintaan.html';
 });
 
-// Profile menu visibility on page load
 function initProfileMenuVisibility() {
     const currentPage = window.location.pathname.split('/').pop();
     const profilMenuItem = document.getElementById('profilMenuItem');
@@ -88,8 +77,6 @@ function initProfileMenuVisibility() {
 }
 
 initProfileMenuVisibility();
-
-// Sidebar toggle
 document.getElementById('sidebarToggle').addEventListener('click', () => {
     document.getElementById('sidebar').classList.toggle('active');
 });

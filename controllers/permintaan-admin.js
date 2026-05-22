@@ -1,7 +1,3 @@
-// Controller: Permintaan Darah (Admin)
-// Dipakai di admin/permintaan-darah.html
-
-// Modal Functions
 function openProsesDitinjauModal() {
     document.getElementById('prosesDitinjauModal').classList.add('active');
 }
@@ -26,7 +22,6 @@ function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('active');
 }
 
-// Close modal when clicking outside
 document.querySelectorAll('.modal').forEach(modal => {
     modal.addEventListener('click', function(e) {
         if (e.target === this) {
@@ -55,7 +50,6 @@ function konfirmasiKirim() {
     closeModal('kirimModal');
 }
 
-// Sidebar toggle
 document.getElementById('sidebarToggle').addEventListener('click', function() {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('active');

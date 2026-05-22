@@ -1,28 +1,20 @@
-/* ============================================
-   GLOBAL STYLES - SIDORA
-   ============================================ */
-
 :root {
-  /* Primary Color Palette */
   --primary: #D84040;
   --secondary: #8E1616;
   --dark: #1D1616;
   --light: #EEEEEE;
 
-  /* Status Colors */
   --success: #198754;
   --warning: #FFC107;
   --danger: #DC3545;
   --info: #0D6EFD;
 
-  /* Support UI Palette */
   --hover-sidebar: #B22222;
   --border-soft: #D9D9D9;
   --bg-card: #FFFFFF;
   --text-main: #2C2C2C;
   --text-muted: #6C757D;
 
-  /* Legacy aliases (kept for compatibility) */
   --primary-color: #D84040;
   --secondary-color: #8E1616;
   --success-color: #198754;
@@ -68,10 +60,6 @@ body {
   letter-spacing: 0.3px;
 }
 
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: var(--text-main);
@@ -100,10 +88,6 @@ a:hover {
   color: var(--secondary);
   text-decoration: underline;
 }
-
-/* ============================================
-   BUTTONS
-   ============================================ */
 
 .btn {
   display: inline-flex;
@@ -193,10 +177,6 @@ a:hover {
   font-size: 0.875rem;
   min-height: auto;
 }
-
-/* ============================================
-   FORMS
-   ============================================ */
 
 .form-group {
   margin-bottom: var(--spacing-md);
@@ -291,10 +271,6 @@ input[type="radio"] {
   }
 }
 
-/* ============================================
-   CARDS & CONTAINERS
-   ============================================ */
-
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-soft);
@@ -340,10 +316,6 @@ input[type="radio"] {
   padding: 0 var(--spacing-base);
 }
 
-/* ============================================
-   TABLES
-   ============================================ */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -374,10 +346,6 @@ tbody tr:hover {
   background-color: var(--light);
 }
 
-/* ============================================
-   BADGES / STATUS
-   ============================================ */
-
 .badge {
   display: inline-flex;
   align-items: center;
@@ -393,10 +361,6 @@ tbody tr:hover {
 .badge-danger   { background: rgba(220,53,69,0.15);  color: var(--danger); }
 .badge-info     { background: rgba(13,110,253,0.15); color: var(--info); }
 .badge-pink     { background: #F8D7DA; color: #842029; }
-
-/* ============================================
-   ALERTS & MESSAGES
-   ============================================ */
 
 .alert {
   padding: var(--spacing-md);
@@ -430,10 +394,6 @@ tbody tr:hover {
   color: #084298;
   border: 1px solid rgba(13,110,253,0.3);
 }
-
-/* ============================================
-   UTILITY CLASSES
-   ============================================ */
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -492,10 +452,6 @@ tbody tr:hover {
 .uppercase  { text-transform: uppercase; }
 .lowercase  { text-transform: lowercase; }
 .capitalize { text-transform: capitalize; }
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 
 @media (max-width: 768px) {
   h1 { font-size: 1.75rem; }

@@ -179,7 +179,6 @@
 </head>
 <body>
     <div class="dashboard-layout">
-        <!-- Navbar -->
         <nav class="navbar">
             <div class="navbar-left">
                 <button class="navbar-toggle" id="sidebarToggle"><svg width="22" height="22" style="display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
@@ -200,7 +199,6 @@
             </div>
         </nav>
 
-        <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <ul class="sidebar-menu">
                 <li class="sidebar-menu-item">
@@ -253,7 +251,6 @@
             </ul>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
             <!-- Page Header -->
             <div class="page-header">
@@ -269,13 +266,11 @@
             </div>
 
             <div class="form-section">
-                <!-- Alert -->
                 <div class="alert-info">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Permintaan darah Anda akan diproses maksimal 24 jam. Silakan hubungi kami jika ada pertanyaan.
                 </div>
 
                 <form id="permintaanForm">
-                    <!-- Informasi Pasien -->
                     <h3>Informasi Pasien</h3>
                     
                     <div class="form-row">
@@ -302,7 +297,6 @@
                         </div>
                     </div>
 
-                    <!-- Permintaan Darah -->
                     <h3 style="margin-top: var(--spacing-2xl); margin-bottom: var(--spacing-lg);">Jenis Darah yang Dibutuhkan</h3>
 
                     <p style="font-size: 0.95rem; color: var(--gray); margin-bottom: var(--spacing-md);">Pilih golongan darah yang Anda butuhkan:</p>
@@ -320,7 +314,6 @@
 
                     <input type="hidden" id="selectedBloodType" name="golongan_darah" required>
 
-                    <!-- Quantity -->
                     <div class="form-group">
                         <label for="jumlah" class="required">Jumlah Kantong Darah</label>
                         <div class="quantity-input">
@@ -330,13 +323,11 @@
                         </div>
                     </div>
 
-                    <!-- Keterangan -->
                     <div class="form-group">
                         <label for="keterangan">Keterangan/Catatan Khusus</label>
                         <textarea id="keterangan" name="keterangan" placeholder="Misalnya: untuk operasi darurat, kondisi pasien kritis, dll"></textarea>
                     </div>
 
-                    <!-- Prioritas -->
                     <div class="form-group">
                         <label for="prioritas" class="required">Prioritas</label>
                         <select id="prioritas" name="prioritas" required>
@@ -347,14 +338,12 @@
                         </select>
                     </div>
 
-                    <!-- Surat Permintaan -->
                     <div class="form-group">
                         <label>Surat Permintaan Resmi (PDF/Image)</label>
                         <input type="file" name="surat_permintaan" id="suratInput" accept=".pdf,.jpg,.jpeg,.png" style="display:block; width:100%; padding:8px; border:1px solid var(--border-color); border-radius:var(--border-radius); background:white; font-family:inherit; font-size:0.9rem;">
                         <small class="text-muted" style="margin-top:4px; display:block;">Opsional, namun disarankan untuk meningkatkan proses verifikasi</small>
                     </div>
 
-                    <!-- Request Summary -->
                     <div class="request-summary">
                         <h4 style="margin-top: 0; color: var(--dark-gray);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg> Ringkasan Permintaan</h4>
                         <div class="summary-item">
@@ -375,7 +364,6 @@
                         </div>
                     </div>
 
-                    <!-- Form Actions -->
                     <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-2xl);">
                         <button type="reset" class="btn btn-outline" style="flex: 1;">Bersihkan Form</button>
                         <button type="submit" class="btn btn-primary" style="flex: 1;">

@@ -1,6 +1,3 @@
-// Controller: Daftar Pendonor
-// Dipakai di petugas/daftar-pendonor.html
-
 const modal = document.getElementById('pendonorModal');
 const tambahBtn = document.getElementById('tambahPendonorBtn');
 const closeBtn = document.getElementById('closeModal');

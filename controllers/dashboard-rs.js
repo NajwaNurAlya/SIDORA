@@ -1,7 +1,3 @@
-// Controller: Dashboard Rumah Sakit
-// Dipakai di rumahsakit/dashboard.html
-
-// Show profile menu only on dashboard page
 function initProfileMenuVisibility() {
     const currentPage = window.location.pathname.split('/').pop() || 'dashboard.html';
     const profilMenuItem = document.getElementById('profilMenuItem');
